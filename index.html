@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Computer Programming in C – Mindmap (CST201)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#0d1117;
+  color:#e6edf3;
+  padding:20px;
+}
+h1,h2,h3 {
+  text-align:center;
+  letter-spacing:1px;
+}
+.mindmap-container {
+  max-width:1200px;
+  margin:0 auto;
+  background:#161b22;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid #30363d;
+}
+.center-node {
+  background:#1f2937;
+  padding:20px;
+  border-radius:50%;
+  width:260px;
+  height:260px;
+  margin:0 auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  font-weight:bold;
+  font-size:18px;
+  border:2px solid #3b82f6;
+}
+.units {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  margin-top:25px;
+}
+.unit {
+  background:#1e293b;
+  padding:15px;
+  border-radius:8px;
+  border-left:5px solid #3b82f6;
+}
+.unit h3 {
+  margin-top:0;
+  text-transform:uppercase;
+  font-size:15px;
+}
+.unit ul {
+  font-size:14px;
+  line-height:1.5;
+}
+.code-section {
+  margin-top:40px;
+  background:#111827;
+  padding:20px;
+  border-radius:10px;
+  border:1px solid #374151;
+}
+code {
+  display:block;
+  white-space:pre;
+  background:#000;
+  padding:10px;
+  border-radius:6px;
+  margin-bottom:18px;
+  font-size:13px;
+  overflow-x:auto;
+  border:1px solid #374151;
+}
+.definitions {
+  margin-top:40px;
+  background:#0f172a;
+  padding:20px;
+  border-radius:10px;
+  border:1px solid #334155;
+}
+.definitions ul {
+  font-size:14px;
+  line-height:1.6;
+}
+footer {
+  text-align:center;
+  margin-top:30px;
+  font-size:13px;
+  color:#9ca3af;
+}
+@media(max-width:800px){
+  .units { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<h1>COMPUTER PROGRAMMING IN C</h1>
+<h2>Created by SK SAHIL (Freelancer, Tutor, Developer) · Diploma 3rd Semester</h2>
+
+<div class="mindmap-container">
+
+<div class="center-node">
+  C Programming <br> Logic · Loops · Arrays · Functions · Pointers
+</div>
+
+<div class="units">
+
+<div class="unit">
+<h3>UNIT 1 – BASICS OF C</h3>
+<ul>
+<li>History & Structure of C</li>
+<li>Tokens: Identifiers, Keywords, Constants</li>
+<li>Data Types & Variables</li>
+<li>Operators (Arithmetic, Logical, Relational, Bitwise)</li>
+<li>Typecasting & Type Conversion</li>
+<li>Formatted I/O (printf, scanf)</li>
+</ul>
+</div>
+
+<div class="unit">
+<h3>UNIT 2 – DECISION & LOOPING</h3>
+<ul>
+<li>if, if-else, nested if, else-if ladder</li>
+<li>switch-case, goto (limitations)</li>
+<li>Loops: for, while, do-while</li>
+<li>break, continue, nested loops</li>
+<li>Menu driven programs</li>
+</ul>
+</div>
+
+<div class="unit">
+<h3>UNIT 3 – ARRAYS & STRINGS</h3>
+<ul>
+<li>1D, 2D & Multidimensional Arrays</li>
+<li>String Declaration & Initialization</li>
+<li>String Functions: strlen, strcpy, strcmp, strcat</li>
+<li>Applications: Palindrome, Character Count</li>
+</ul>
+</div>
+
+<div class="unit">
+<h3>UNIT 4 – FUNCTIONS</h3>
+<ul>
+<li>Need of Functions</li>
+<li>Function Prototype & Definition</li>
+<li>Call by Value & Call by Reference</li>
+<li>Storage Classes (auto, static, extern, register)</li>
+<li>Recursion & Applications</li>
+</ul>
+</div>
+
+<div class="unit" style="grid-column:1/3;">
+<h3>UNIT 5 – POINTERS</h3>
+<ul>
+<li>Pointer Declaration & Dereferencing</li>
+<li>Pointer Arithmetic</li>
+<li>Pointer & Arrays</li>
+<li>Pointer to Functions & Pointer to Pointer</li>
+<li>Dynamic Memory malloc, calloc, realloc, free</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+
+<!-- BASIC ESSENTIAL CONCEPTS FOR C PROGRAMMING -->
+<div style="margin-top:35px;background:#111827;padding:18px;border-radius:10px;border:1px solid #374151;">
+<h2 style="text-align:center;margin-bottom:10px;">Basic Essential Concepts (Foundation)</h2>
+<ul style="font-size:14px;line-height:1.6;">
+<li><b>Header Files:</b> #include &lt;stdio.h&gt;, &lt;math.h&gt;, &lt;string.h&gt;, &lt;ctype.h&gt; etc.</li>
+<li><b>Main Function:</b> Entry point of a C program.</li>
+<li><b>printf/scanf:</b> Used for formatted input/output.</li>
+<li><b>Data Types:</b> int, float, char, double, void.</li>
+<li><b>Storage Size:</b> int(2/4 bytes), float(4 bytes), double(8 bytes).</li>
+<li><b>Format Specifiers:</b> %d (int), %f (float), %c (char), %s (string), %lf (double).</li>
+<li><b>Type Modifiers:</b> short, long, signed, unsigned.</li>
+<li><b>Escape Sequences:</b> \n (newline), \t (tab), \r (carriage return), \\ (backslash).</li>
+<li><b>Operators:</b> Arithmetic (+,-,*,/,%), Relational (&lt;,&gt;,&lt;=), Logical (&&,||,!), Bitwise (&amp; | ^ ~ &lt;&lt; &gt;&gt;).</li>
+<li><b>Conditionals:</b> if, else-if, else.</li>
+<li><b>Loops:</b> for, while, do-while.</li>
+<li><b>Functions:</b> returnType functionName(parameters);</li>
+<li><b>Arrays:</b> int a[10]; → continuous memory.</li>
+<li><b>Strings:</b> char s[20]; → ends with '\0'.</li>
+<li><b>Pointers:</b> int *p; → stores address of variable.</li>
+<li><b>DMA:</b> malloc, calloc, realloc, free.</li>
+<li><b>Files:</b> fopen, fclose, fgetc, fputc, fgets, fputs.</li>
+</ul>
+</div>
+
+<!-- 20 IMPORTANT C PROGRAMS -->
+<div class="code-section">
+<h2>TOP 20 IMPORTANT C PROGRAMS (EXAM ORIENTED)</h2>
+
+<code>// 1. Check even or odd
+#include &lt;stdio.h&gt;
+int main(){
+ int n; scanf("%d",&n);
+ if(n%2==0) printf("Even");
+ else printf("Odd");
+}</code>
+
+<code>// 2. Largest of three numbers
+#include &lt;stdio.h&gt;
+int main(){
+ int a,b,c; scanf("%d%d%d",&a,&b,&c);
+ if(a>=b && a>=c) printf("%d",a);
+ else if(b>=c) printf("%d",b);
+ else printf("%d",c);
+}</code>
+
+<code>// 3. Factorial using loop
+int main(){
+ int n,i; long f=1;
+ scanf("%d",&n);
+ for(i=1;i<=n;i++) f*=i;
+ printf("%ld",f);
+}</code>
+
+<code>// 4. Fibonacci Series
+int main(){
+ int n,a=0,b=1,c,i; scanf("%d",&n);
+ for(i=1;i<=n;i++){ printf("%d ",a);
+ c=a+b; a=b; b=c;}
+}</code>
+
+<code>// 5. Reverse a number
+int main(){
+ int n,rev=0,r; scanf("%d",&n);
+ while(n){ r=n%10; rev=rev*10+r; n/=10;}
+ printf("%d",rev);
+}</code>
+
+<code>// 6. Check Palindrome (number)
+int main(){
+ int n,rev=0,r,temp; scanf("%d",&n);
+ temp=n;
+ while(n){ r=n%10; rev=rev*10+r; n/=10;}
+ if(rev==temp) printf("Palindrome");
+ else printf("Not Palindrome");
+}</code>
+
+<code>// 7. Prime Number Check
+int main(){
+ int n,i,flag=1; scanf("%d",&n);
+ if(n<=1) flag=0;
+ for(i=2;i*i<=n;i++) if(n%i==0) flag=0;
+ printf(flag?"Prime":"Not Prime");
+}</code>
+
+<code>// 8. Sum of Digits
+int main(){
+ int n,s=0,r; scanf("%d",&n);
+ while(n){ r=n%10; s+=r; n/=10;}
+ printf("%d",s);
+}</code>
+
+<code>// 9. Armstrong Number
+int main(){
+ int n,temp,r,sum=0; scanf("%d",&n);
+ temp=n;
+ while(n){ r=n%10; sum+=r*r*r; n/=10;}
+ printf(sum==temp?"Armstrong":"Not Armstrong");
+}</code>
+
+<code>// 10. Count Vowels & Consonants in String
+#include &lt;ctype.h&gt;
+int main(){
+ char s[100]; int v=0,c=0,i;
+ gets(s);
+ for(i=0;s[i];i++){
+  if(isalpha(s[i])){
+   char ch=tolower(s[i]);
+   if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u') v++;
+   else c++;
+ }} printf("V=%d C=%d",v,c);
+}</code>
+
+<code>// 11. String Length (without strlen)
+int main(){
+ char s[100]; int i=0;
+ gets(s);
+ while(s[i]!='\0') i++;
+ printf("%d",i);
+}</code>
+
+<code>// 12. Matrix Addition
+int main(){
+ int a[3][3],b[3][3],c[3][3],i,j;
+ for(i=0;i<3;i++)
+ for(j=0;j<3;j++) scanf("%d",&a[i][j]);
+ for(i=0;i<3;i++)
+ for(j=0;j<3;j++) scanf("%d",&b[i][j]);
+ for(i=0;i<3;i++)
+ for(j=0;j<3;j++) c[i][j]=a[i][j]+b[i][j];
+}</code>
+
+<code>// 13. Call by Reference (swap)
+void swap(int *x,int *y){
+ int t=*x; *x=*y; *y=t;
+}
+int main(){
+ int a,b; scanf("%d%d",&a,&b);
+ swap(&a,&b); printf("%d %d",a,b);
+}</code>
+
+<code>// 14. Recursive Factorial
+long fact(int n){
+ return (n<=1)?1:n*fact(n-1);
+}
+int main(){
+ int n; scanf("%d",&n);
+ printf("%ld",fact(n));
+}</code>
+
+<code>// 15. Pointer Example
+int main(){
+ int a=10, *p;
+ p=&a;
+ printf("%d %p",*p,p);
+}</code>
+
+<code>// 16. Dynamic Memory Allocation
+#include &lt;stdlib.h&gt;
+int main(){
+ int n,*p,i; scanf("%d",&n);
+ p=(int*)malloc(n*sizeof(int));
+ for(i=0;i<n;i++) scanf("%d",&p[i]);
+}</code>
+
+<code>// 17. Structure Example
+struct student{ char name[20]; int roll; }s;
+int main(){
+ scanf("%s%d",s.name,&s.roll);
+ printf("%s %d",s.name,s.roll);
+}</code>
+
+<code>// 18. File Read
+int main(){
+ FILE *f=fopen("a.txt","r");
+ char ch;
+ while((ch=fgetc(f))!=EOF) putchar(ch);
+ fclose(f);
+}</code>
+
+<code>// 19. File Write
+int main(){
+ FILE *f=fopen("b.txt","w");
+ fprintf(f,"Hello File");
+ fclose(f);
+}</code>
+
+<code>// 20. Bubble Sort
+int main(){
+ int a[100],n,i,j,temp;
+ scanf("%d",&n);
+ for(i=0;i<n;i++) scanf("%d",&a[i]);
+ for(i=0;i<n-1;i++)
+ for(j=0;j<n-i-1;j++)
+ if(a[j]>a[j+1]){
+  temp=a[j]; a[j]=a[j+1]; a[j+1]=temp;
+ }
+ for(i=0;i<n;i++) printf("%d ",a[i]);
+}</code>
+     
+<code>
+// Palindrome Check (String)
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+int main(){
+ char s[100]; int i, len, flag=1;
+ gets(s);
+ len=strlen(s);
+ for(i=0;i&lt;len/2;i++){
+  if(s[i]!=s[len-1-i]){ flag=0; break; }
+ }
+ printf(flag?"Palindrome":"Not Palindrome");
+}
+</code>
+
+<code>
+// Palindrome Check (Number)
+#include &lt;stdio.h&gt;
+int main(){
+ int n, temp, r, rev=0;
+ scanf("%d",&n);
+ temp=n;
+ while(n){ r=n%10; rev=rev*10+r; n/=10; }
+ printf(temp==rev?"Palindrome":"Not Palindrome");
+}
+</code>
+
+<code>
+// Factorial (Non-Recursive)
+#include &lt;stdio.h&gt;
+int main(){
+ int n,i; long f=1;
+ scanf("%d",&n);
+ for(i=1;i<=n;i++) f*=i;
+ printf("%ld",f);
+}
+</code>
+
+<code>
+// Factorial Using Recursion
+long fact(int n){
+ return (n<=1)?1:n*fact(n-1);
+}
+int main(){
+ int n; scanf("%d",&n);
+ printf("%ld",fact(n));
+}
+</code>
+
+<code>
+// Sum of n Natural Numbers
+#include &lt;stdio.h&gt;
+int main(){
+ int n,i,sum=0;
+ scanf("%d",&n);
+ for(i=1;i<=n;i++) sum+=i;
+ printf("%d",sum);
+}
+</code>
+
+<code>
+// Multiplication Table
+#include &lt;stdio.h&gt;
+int main(){
+ int n,i;
+ scanf("%d",&n);
+ for(i=1;i<=10;i++) printf("%d x %d = %d\n",n,i,n*i);
+}
+</code>
+
+<code>
+// Greatest Number from an Array
+#include &lt;stdio.h&gt;
+int main(){
+ int a[100],n,i,big;
+ scanf("%d",&n);
+ for(i=0;i<n;i++) scanf("%d",&a[i]);
+ big=a[0];
+ for(i=1;i<n;i++) if(a[i]>big) big=a[i];
+ printf("Largest = %d",big);
+}
+</code>
+
+<code>
+// Largest Among 3 Numbers
+#include &lt;stdio.h&gt;
+int main(){
+ int a,b,c;
+ scanf("%d%d%d",&a,&b,&c);
+ if(a>=b && a>=c) printf("%d",a);
+ else if(b>=c) printf("%d",b);
+ else printf("%d",c);
+}
+</code>
+
+<code>
+// Check Alphabet, Digit or Special Character
+#include &lt;ctype.h&gt;
+int main(){
+ char ch; scanf("%c",&ch);
+ if(isalpha(ch)) printf("Alphabet");
+ else if(isdigit(ch)) printf("Digit");
+ else printf("Special Character");
+}
+</code>
+
+<code>
+// Count Characters, Words & Lines in File
+#include &lt;stdio.h&gt;
+int main(){
+ FILE *f=fopen("input.txt","r");
+ char c; int ch=0,w=1,l=1;
+ while((c=fgetc(f))!=EOF){
+  ch++;
+  if(c==' ') w++;
+  if(c=='\n') l++;
+ }
+ fclose(f);
+ printf("Chars=%d Words=%d Lines=%d",ch,w,l);
+}
+</code>
+
+
+</div>
+
+<!-- DEFINITIONS SECTION -->
+<div class="definitions">
+<h2>CONCISE DEFINITIONS — QUICK REVISION</h2>
+<ul>
+<li><b>Variable:</b> Named memory location used to store data.</li>
+<li><b>Constant:</b> Fixed value that cannot change during execution.</li>
+<li><b>Keyword:</b> Reserved word having special meaning in C.</li>
+<li><b>Operator:</b> Symbol that performs arithmetic or logical operation.</li>
+<li><b>Compiler:</b> Converts C code to machine language.</li>
+<li><b>Function:</b> Block of reusable statements.</li>
+<li><b>Array:</b> Collection of similar data items stored in contiguous memory.</li>
+<li><b>String:</b> Sequence of characters ending with '\0'.</li>
+<li><b>Pointer:</b> Variable that stores address of another variable.</li>
+<li><b>Dynamic Memory:</b> Allocation during runtime using malloc/calloc.</li>
+<li><b>Recursion:</b> Function calling itself.</li>
+<li><b>Call by Value:</b> Pass copy of variable.</li>
+<li><b>Call by Reference:</b> Pass address of variable.</li>
+<li><b>File:</b> Data stored permanently on disk.</li>
+</ul>
+</div>
+
+
+
+<footer>
+Mindmap + Codes for CST201 – Computer Programming in C (3rd Semester)
+</footer>
+
+</body>
+</html>
